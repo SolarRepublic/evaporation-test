@@ -50,8 +50,8 @@ cosmwasm-schema = { version = "1.1.0", optional = true }
 #cosmwasm-std = { git = "https://github.com/scrtlabs/cosmwasm", rev = "f7e2b1dbf11e113e258d796288752503a5012367", package = "cosmwasm-std" }
 #cosmwasm-storage = { git = "https://github.com/scrtlabs/cosmwasm", rev = "f7e2b1dbf11e113e258d796288752503a5012367", package = "cosmwasm-storage" }
 
-cosmwasm-std = { git = "https://github.com/SolarRepublic/cosmwasm", rev = "5b7460001a0712793bfeaddb5b9e1862890cb5c8" }
-cosmwasm-storage = { git = "https://github.com/SolarRepublic/cosmwasm", rev = "5b7460001a0712793bfeaddb5b9e1862890cb5c8" }
+cosmwasm-std = { git = "https://github.com/SolarRepublic/cosmwasm", rev = "9d1ca04c0a0f5430f1d1ad0e2a01ea8572b8fd63" }
+cosmwasm-storage = { git = "https://github.com/SolarRepublic/cosmwasm", rev = "9d1ca04c0a0f5430f1d1ad0e2a01ea8572b8fd63" }
 
 [[bin]]
 name = "schema"

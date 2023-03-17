@@ -1,4 +1,4 @@
-use cosmwasm_std::{Uint64, Api, StdResult};
+use cosmwasm_std::{Api, StdResult};
 use schemars::JsonSchema;
 use serde::{Deserialize, Serialize};
 
@@ -12,14 +12,14 @@ pub struct InstantiateMsg {
 pub enum ExecuteMsg {
     Increment {},
     Reset { count: i32 },
-    EvaporateTest { evaporate: Uint64 }
+    EvaporateTest { evaporate: u32 }
 }
 
 impl ExecuteMsg {
     pub fn execute_evaporate_gas(&self, api: &dyn Api) -> StdResult<bool> {
         match self {
             ExecuteMsg::EvaporateTest { evaporate } => {
-                return api.gas_evaporate(&evaporate.u64());
+                return api.gas_evaporate(*evaporate);
             }
             _ => { Ok(false) }
         }
