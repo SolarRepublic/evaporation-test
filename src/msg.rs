@@ -16,12 +16,12 @@ pub enum ExecuteMsg {
 }
 
 impl ExecuteMsg {
-    pub fn execute_evaporate_gas(&self, api: &dyn Api) -> StdResult<bool> {
+    pub fn execute_evaporate_gas(&self, api: &dyn Api) -> StdResult<()> {
         match self {
             ExecuteMsg::EvaporateTest { evaporate } => {
                 return api.gas_evaporate(*evaporate);
             }
-            _ => { Ok(false) }
+            _ => { Ok(()) }
         }
     }
 }
