@@ -2,7 +2,7 @@
 name = "evaporate_contract_example"
 version = "0.1.0"
 authors = ["Ben Adams"]
-edition = "2018"
+edition = "2021"
 
 exclude = [
   # Those files are rust-optimizer artifacts. You might want to commit them for convenience but they should not be part of the source code publication.
@@ -36,8 +36,8 @@ schema = ["cosmwasm-schema"]
 [dependencies]
 serde = { version = "1.0.147", default-features = false, features = ["derive"] }
 schemars = "0.8.11"
-cosmwasm-std = { version = "1.0.0" }
-cosmwasm-storage = { version = "1.0.0" }
+cosmwasm-std = { package = "secret-cosmwasm-std", version = "1.1.11"  }
+cosmwasm-storage = { package = "secret-cosmwasm-storage", version = "1.1.11"  }
 
 # Used only for schema generation
 cosmwasm-schema = { version = "1.1.0", optional = true }
@@ -46,12 +46,6 @@ cosmwasm-schema = { version = "1.1.0", optional = true }
 # secret-toolkit = "0.7.0"
 # cw-storage-plus = { version = "0.14.0", default-features = false }
 
-[patch.crates-io]
-#cosmwasm-std = { git = "https://github.com/scrtlabs/cosmwasm", rev = "f7e2b1dbf11e113e258d796288752503a5012367", package = "cosmwasm-std" }
-#cosmwasm-storage = { git = "https://github.com/scrtlabs/cosmwasm", rev = "f7e2b1dbf11e113e258d796288752503a5012367", package = "cosmwasm-storage" }
-
-cosmwasm-std = { git = "https://github.com/SolarRepublic/cosmwasm", rev = "6d1d2bec78de43f55e4d5215e9efbb71fca1aecc" }
-cosmwasm-storage = { git = "https://github.com/SolarRepublic/cosmwasm", rev = "6d1d2bec78de43f55e4d5215e9efbb71fca1aecc" }
 
 [[bin]]
 name = "schema"
