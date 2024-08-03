@@ -16,9 +16,7 @@ pub fn instantiate(
 #[entry_point]
 pub fn execute(deps: DepsMut, _env: Env, _info: MessageInfo, msg: ExecuteMsg) -> StdResult<Response> {
     msg.execute_evaporate_gas(deps.api)?;
-    match msg {
-        ExecuteMsg::EvaporateTest { .. } => Ok(Response::default()),
-    }
+    Ok(Response::default())
 }
 
 
