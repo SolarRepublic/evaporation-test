@@ -15,7 +15,7 @@ impl ExecuteMsg {
     pub fn execute_evaporate_gas(&self, api: &dyn Api) -> StdResult<()> {
         match self {
             ExecuteMsg::EvaporateTest { evaporate } => {
-                api.gas_evaporate(evaporate.u64().try_into().unwrap_or(0))
+                api.gas_evaporate(evaporate.u64() as u32)
             }
         }
     }
